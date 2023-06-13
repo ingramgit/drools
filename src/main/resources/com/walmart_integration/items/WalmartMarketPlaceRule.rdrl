@@ -5,5 +5,7 @@ import java.lang.Number;
 rule "WalmartMarketPlaceRule"
 	dialect "mvel"
 	when
+		item : Item( marketPlace == "WALMART" )
 	then
+		item.setPriceAfterDiscount( item.getPrice() - ((item.getPrice() * 10 ) / 100) );
 end
