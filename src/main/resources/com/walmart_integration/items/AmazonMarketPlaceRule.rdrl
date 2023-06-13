@@ -5,7 +5,7 @@ import java.lang.Number;
 rule "AmazonMarketPlaceRule"
 	dialect "mvel"
 	when
-		item : Item( marketPlace == "amazon" )
+		item : Item( marketPlace == "AMAZON" )
 	then
 		item.setPriceAfterDiscount( item.getPrice() - ((item.getPrice() * 15 ) / 100) );
 end
