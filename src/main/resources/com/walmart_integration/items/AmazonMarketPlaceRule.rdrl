@@ -5,5 +5,7 @@ import java.lang.Number;
 rule "AmazonMarketPlaceRule"
 	dialect "mvel"
 	when
+		item : Item( marketPlace == "amazon" )
 	then
+		item.setPriceAfterDiscount( 1 );
 end
