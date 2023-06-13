@@ -7,5 +7,5 @@ rule "AmazonMarketPlaceRule"
 	when
 		item : Item( marketPlace == "amazon" )
 	then
-		item.setPriceAfterDiscount( 1 );
+		item.setPriceAfterDiscount( item.getPrice() - ((item.getPrice() * 15 ) / 100) );
 end
