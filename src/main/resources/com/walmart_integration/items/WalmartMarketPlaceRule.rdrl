@@ -1,0 +1,9 @@
+package com.walmart_integration.items;
+
+import java.lang.Number;
+
+rule "WalmartMarketPlaceRule"
+	dialect "mvel"
+	when
+	then
+end
