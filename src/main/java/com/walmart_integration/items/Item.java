@@ -6,12 +6,44 @@ package com.walmart_integration.items;
 
 public class Item implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Item() {
-    }
+	private java.lang.String marketPlace;
+	private java.lang.Double price;
+	private java.lang.Double priceAfterDiscount;
 
+	public Item() {
+	}
 
+	public java.lang.String getMarketPlace() {
+		return this.marketPlace;
+	}
 
+	public void setMarketPlace(java.lang.String marketPlace) {
+		this.marketPlace = marketPlace;
+	}
+
+	public java.lang.Double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(java.lang.Double price) {
+		this.price = price;
+	}
+
+	public java.lang.Double getPriceAfterDiscount() {
+		return this.priceAfterDiscount;
+	}
+
+	public void setPriceAfterDiscount(java.lang.Double priceAfterDiscount) {
+		this.priceAfterDiscount = priceAfterDiscount;
+	}
+
+	public Item(java.lang.String marketPlace, java.lang.Double price,
+			java.lang.Double priceAfterDiscount) {
+		this.marketPlace = marketPlace;
+		this.price = price;
+		this.priceAfterDiscount = priceAfterDiscount;
+	}
 
 }
